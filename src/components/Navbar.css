@@ -1,0 +1,120 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+}
+
+/* Navbar Container */
+.navbar {
+  padding: 1rem 2rem;
+  color: #fff;
+  position: sticky;     /* 👈 Makes it stick */
+  top: 0;               /* 👈 Stick to top */
+  z-index: 1000;        /* 👈 Stay above other content */
+  /*
+  background-color: #1d1d1d;
+  padding: 1rem 2rem;
+  color: #fff;
+  position: relative;
+  */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo-img {
+  padding-top: 1rem;
+  width: 200px;
+  height: auto;
+}
+/*
+.logo {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  color: #d4af37;
+}
+*/
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+  cursor: default;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-link.active {
+  background-color: white;
+  color: #1e1e1e;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #d4af37;
+  cursor: pointer;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    padding: 2rem 0;
+    text-align: center;
+    gap: 1.5rem;
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.logo-img {
+  height: auto;
+  width: 150px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Hover Effects */
+.nav-link,
+.book-now {
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d4af37;
+}
+
+/* Keep rest of styles as before... */

@@ -1,0 +1,24 @@
+.star-rating {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}
+
+.star {
+  color: #ccc;
+  font-size: 20px;
+  transition: color 0.2s ease-in-out;
+  text-shadow: 0 2px 2px rgba(255, 255, 255, 0.5);
+}
+
+.star.filled {
+  color: #facc15; /* Gold */
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+  .star-rating {
+    justify-content: center !important;
+    gap: 10px;
+  }
+}
