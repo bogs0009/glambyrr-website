@@ -18,6 +18,7 @@ function App() {
       <Element name="about"><About /></Element>
       <Element name="contacts"><Contacts /></Element>
       <Footer />
+      
     </div>
   );
 }
