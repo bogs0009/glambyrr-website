@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import Navbar from './components/Navbar';
 import HeroSlider from './components/HeroSlider';
 import ServicesSection from './components/ServicesSection';
@@ -23,4 +23,40 @@ function App() {
   );
 }
 
+export default App; */
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import HeroSlider from './components/HeroSlider';
+import ServicesSection from './components/ServicesSection';
+import PortfolioSection from './components/PortfolioSection';
+import About from './components/About';
+import Contacts from './components/Contacts';
+import ExtendedPortfolio from './pages/ExtendedPortfolio';
+
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <HeroSlider />
+              <ServicesSection />
+              <PortfolioSection />
+              <About />
+              <Contacts />
+            </>
+          }
+        />
+        <Route path="/portfolio" element={<ExtendedPortfolio />} />
+      </Routes>
+    </Router>
+  );
+}
+
 export default App;
+
